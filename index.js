@@ -244,12 +244,11 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
 function get20s(array) {
-  for(let i = 0; i < array.length; i++){
-    array.split("-");
-  }
-}
+//   const newArray = array.split('1900 - 2000');
+//   return newArray;
+ }
 
-  console.log(get20s(artists));
+// console.log('task 4', get20s(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -261,8 +260,10 @@ Use removeArtist to do the following:
 For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
 function removeArtist(array, number) {
-
+ array.splice(number, 1);
+  return array.length;
 }
+console.log('task 5', removeArtist(artists, 1));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -280,11 +281,17 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  
+function addArtist(array) {
+  array.push('id: 20',
+    'name: Kaleb Van Heusen', 
+    'years: 1998 - 2021',
+    'genre: Web Design', 
+    'nationality: American',
+    'bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
+    return array;
 }
 
-// console.log(addArtists(artists));
+console.log(addArtist(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
