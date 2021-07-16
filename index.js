@@ -244,12 +244,12 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
 function get20s(array) {
-  for(let i = 0; i < array.length; i ++){
+  for(let i = 0; i < array.length; i++){
+    array.split("-");
   }
-  return array;
 }
 
-console.log('task 4', get20s(artists));
+  console.log(get20s(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -260,13 +260,9 @@ Use removeArtist to do the following:
 
 For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(array, index) {
-  let newArray = [...array];
-  newArray[index]
-  return newArray.length;
-}
+function removeArtist(array, number) {
 
-console.log('task 5', removeArtist(artists, 0));
+}
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
