@@ -243,14 +243,13 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
 function get20s(array) {
-  //   const newArray = array.split('1900 - 2000');
-  //   return newArray;
+  const str = [...array] + "";
+  const yearStr = str.split("19   - 20  ");
+  return yearStr;
 }
 
-// console.log('task 4', get20s(artists));
+console.log("task 4", get20s(artists));
 // I really tried I stayed up almost all night trying to find answers for these two here. Might have been overthinking the solution though. Pretty disappointed.
-
-
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -284,14 +283,14 @@ Use addArtist to do the following:
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
 function addArtist(array) {
-  array.push(
-    "id: 20",
-    "name: Kaleb Van Heusen",
-    "year: 1998 - 2021",
-    "genre: Web Design",
-    "nationality: American",
-    "bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  );
+  array.push({
+    id: "20",
+    name: "Kaleb Van Heusen",
+    year: "1998 - 2021",
+    genre: "Web Design",
+    nationality: "American",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  });
   return array;
 }
 
@@ -306,16 +305,18 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 
 function lotsOfArt(array) {
   for (let i = 0; i < array.length; i++) {
-    const noPaintings = array[i].paintings;
-    const namePos = array[i].name;
-    if (noPaintings >= 100) {
-    }
+    // const noPaintings = array[i].paintings;
+    // const namePos = array[i].name;
+    let newArray = [];
+      if (array[i].paintings >= 100){
+      newArray.push(array[i].name);
+      }
+      return newArray;
   }
 }
 
 console.log("task 7", lotsOfArt(artists));
 // I really tried I stayed up almost all night trying to find answers for these two here. Might have been overthinking the solution though. Pretty disappointed.
-
 
 /* ***** END OF TASKS ***** */
 
