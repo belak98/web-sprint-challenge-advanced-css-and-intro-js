@@ -208,17 +208,17 @@ Practice accessing data above by console.log-ing following items:
 (no functions needed) */
 
 //(1) Name of the first artist (0th index) in the array
-console.log(artists[0].name);
+console.log('task 1', artists[0].name);
 
 //(2) Bio of the third artist (2nd index) in the array 
-console.log(artists[2].bio);
+console.log('task 1b', artists[2].bio);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-artists[8]splice(1, 1, 'Vincent Van Gogh');
-console.log(artists[8].name);
+artists[8].name = 'Vincent Van Gogh'
+console.log('task 2', artists[8].name);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
 Use getArtistByIndex to do the following:
@@ -232,7 +232,7 @@ function getArtistByIndex(array, number) {
   return `the artist at index ${number} is ${array[number].name}`
 }
 
-console.log(getArtistByIndex(artists, 0));
+console.log('task 3', getArtistByIndex(artists, 0));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use get20s to do the following: 
@@ -243,11 +243,13 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
-function get20s(/*Your Code Here*/) {
-  /*Your Code Here*/
+function get20s(array) {
+  for(let i = 0; i < array.length; i ++){
+  }
+  return array;
 }
 
-
+console.log('task 4', get20s(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -258,10 +260,13 @@ Use removeArtist to do the following:
 
 For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function removeArtist(array, index) {
+  let newArray = [...array];
+  newArray[index]
+  return newArray.length;
 }
 
+console.log('task 5', removeArtist(artists, 0));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -280,10 +285,10 @@ Use addArtist to do the following:
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
 function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+  
 }
 
-
+// console.log(addArtists(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
